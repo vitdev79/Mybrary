@@ -1,10 +1,10 @@
-const mangoose = require("mongoose");
+const mongoose = require("mongoose");
 
-const authorsSchema = new mangoose.Schema({
+const authorSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
   },
 });
 
-module.exports = mangoose.model("Author", authorsSchema);
+module.exports = mongoose.model("Author", authorSchema);
