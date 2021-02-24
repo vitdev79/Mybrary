@@ -17,7 +17,7 @@ app.set("views", "views");
 
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 const mongoose = require("mongoose");
