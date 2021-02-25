@@ -22,15 +22,15 @@
 }
 
 .btn-row {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .btn-row > * {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
-.btn-row > * :first-child{
-    margin-left: 0;
+.btn-row > * :first-child {
+  margin-left: 0;
 }
 
 .btn-primary {
@@ -51,3 +51,4 @@
 .btn-danger:hover {
   color: var(--color-btn-danger-text-dark);
   background-color: var(--color-btn-danger-background-dark);
+}
