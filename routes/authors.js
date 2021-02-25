@@ -45,7 +45,6 @@ router.post("/", async (req, res) => {
     const newAuthor = await author.save();
     res.redirect(`authors/${newAuthor.id}`);
   } catch (err) {
-    console.error(err);
     res.render("authors/new", {
       author: author,
       errorMessage: "Error creating Author",
@@ -88,7 +87,6 @@ router.delete("/:id", async (req, res) => {
     await author.remove();
     res.redirect("/authors");
   } catch {
-    console.error(author);
     if (author == null) {
       res.redirect("/");
     } else {
