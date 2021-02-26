@@ -81,6 +81,9 @@ router.put("/:id", async (req, res) => {
     book.publishDate = new Date(req.body.publishDate);
     book.pageCount = req.body.pageCount;
     book.description = req.body.description;
+
+    console.log(book.publishDate.toISOString().split("T")[0]);
+
     if (req.body.cover != null && req.body.cover != "") {
       saveCover(book, req.body.cover);
     }
